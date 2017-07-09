@@ -1,0 +1,70 @@
+/*colors used:
+225378
+1695A3
+ACF0F2
+F3FFE2
+EB7F00
+*/
+body{
+	background: #F3FFE2;
+}
+
+.container{
+	width:960px;
+	margin: 20px auto;
+}
+
+h1{
+	font-size: 48px;
+	color: #fff;
+	padding: 20px;
+	margin-bottom: 40px;
+	background-color: #225378;
+	text-align: center;
+}
+
+.direction-container{
+	background-color: #EB7F00;
+	font-size: 20px;
+	color: #fff;
+	line-height: 30px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+.gem{
+	height: 100px;
+}
+button{
+	background-color: #ACF0F2;
+	margin-bottom: 20px;
+
+}
+
+.goal-amount{
+	font-size:36px;
+
+}
+
+.goal-box{
+	color: #fff;
+	background-color: #225378;
+	width:150px;
+	padding: 20px;
+	margin-bottom: 20px;
+	
+}
+
+.score-box{
+	
+}
+
+.score-title{
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.score-count{
+	font-size: 28px;
+
+}

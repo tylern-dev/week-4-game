@@ -8,31 +8,41 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<h1>Crystals Collector!</h1>
-	
-	<p>You will be given a random number at the start of the game.</p>
-	<p>there are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score</p>
-	<p>You win the game by matching your total score to the random amount. you lose the game if your total score goes above the random number.</p>
-	<p>The value of each crystal is hidden from you until you click on it.</p>
-	<p>Each time when the game starts, the game will change the values of the crystal</p>
-	
-	<div class="goal-box">
-		<h2 id="goal-amount"></h2>
-	</div>
-	<div class="score-box">
-		<p id="wins-count"></p>
-		<p id="losses-count"></p>
-	</div>
+	<div class="container">
+		<h1 class="main-title">Crystals Collector!</h1>
+		
+		<div class="direction-container">	
+			<p class="directions">You will be given a random number at the start of the game.</p>
+			<p class="directions">There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score</p>
+			<p class="directions">You win the game by matching your total score to the random amount. you lose the game if your total score goes above the random number.</p>
+			<p class="directions">The value of each crystal is hidden from you until you click on it.</p>
+			<p class="directions">Each time when the game starts, the game will change the values of the crystal</p>
+		</div>
+			
+		<div class="goal-box">
+			<p>This amount to win:</p>
+			<h2 class="goal-amount" id="goal-amount">32</h2>
+		</div>
+		
+		<div class="score-box">
+			<p>Wins: <span id="wins-count"></span></p>
+			<p>Losses: <span id="losses-count"></span></p>
+		</div>
+		
 
-	<!-- add gems -->
+		<button><img src="assets/images/diamond.png" alt="diamond" class="gem"></button>
+		<button><img src="assets/images/emerald.png" alt="emerald" class="gem"></button>
+		<button><img src="assets/images/amethyst.png" alt="amethyst" class="gem"></button>
+		<button><img src="assets/images/pearl.png" alt="pearl" class="gem"></button>
 
-	<div class="score-title">
-		<p>Your total score is:</p>
-	</div>
-	<div class="score-container">
-		<h2 id="score-count"></h2>
-	</div>
+		<div class="score-title-container">
+			<p class="score-title">Your total score is:</p>
+			<h2 class="score-count" id="score-count">12</h2>
+		</div>
 
+		
+
+	</div>
 
 
 	<script type="text/javascript" href="assets/javascript/game.js"></script>
