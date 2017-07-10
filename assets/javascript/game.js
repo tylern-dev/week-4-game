@@ -7,10 +7,10 @@ var wins = 0;
 var losses = 0;
 var goalAmount;
 var goalAmountDisplay;
-var score;
+var score = 0;
 var gem;
 var gemArray = ['diamond','emerald','amethyst', 'pearl'];
-var gemNumber = [];
+var gemNumber;
 
 
 
@@ -21,50 +21,63 @@ function randomNumGen(min, max){
 	return Math.floor(Math.random()*(max-min)) + min;	
 }
 
+
 function gemButton(){
 	$('button').on('click', function(event){
-		gem = event.currentTarget.id;
-		for(var i=0; i<gemArray.length; i++){
-			if(gem===gemArray[i]){
-				score += gemNumber[i];
-				console.log('score '+score)
-			}
-		}
+		gemId = event.currentTarget.id;
+		gemScore(gemId);
+		gameLogic(score)
 		$('#score-count').html(score)
 	});
-		// console.log('gemButton' +score);
+		
 	
 }
 
-function gameLogic(pscore){
-	if(pscore > goalAmount){
-		console.log('score too high')
-		$('#status-message').html('You lost!');
-		losses++;
-		gameStart();
-	}
-	else if(pscore === goalAmount){
-		$('status-message').html('You Won!');
-		wins++;
-		gameStart()
+function gemScore(buttonId){
+	for(var i=0; i<gemArray.length; i++){
+		if(buttonId===gemArray[i]){
+			console.log('score '+score)
+			console.log('gem Number '+gemNumber)
+			return score += gemNumber[i];
+		}
 	}
 }
 
+//checks to see if the amount is reached. starts new game
+function gameLogic(pScore){
+	if(pScore > goalAmount){
+		losses += 1;
+		$('#status-message').html('You lost!');
+		$('#losses-count').html(losses);
+		gameStart();
+	}
+	else if(pScore === goalAmount){
+		wins += 1;
+		$('#status-message').html('You Won!');
+		$('#wins-count').html(wins);
+		gameStart();
+	}
+}
+
+//this function starts the game and should reset the score back to 0 and generates a new number 
 function gameStart(){
-	score=0;
+	// score=0;
+	gemNumber = [];
 	goalAmount = randomNumGen(19,120)
-	goalAmountDisplay = $('#goal-amount').html(goalAmount);
+	
 	for(var i = 0; i<4; i++){
 		gemNumber.push(randomNumGen(1,12));
 	}
 	gemButton();
 
+	$('#goal-amount').html(goalAmount);
+	$('#score-count').html(score);
 }
 
 
 
 gameStart()
 
-console.log('gem number'+gemNumber)
+
 
 
