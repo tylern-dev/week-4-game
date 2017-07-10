@@ -21,30 +21,34 @@
 			
 		<div class="goal-box">
 			<p>This amount to win:</p>
-			<h2 class="goal-amount" id="goal-amount">32</h2>
+			<h2 class="goal-amount" id="goal-amount"></h2>
 		</div>
 		
 		<div class="score-box">
+			<span id="status-message"></span>
 			<p>Wins: <span id="wins-count"></span></p>
 			<p>Losses: <span id="losses-count"></span></p>
 		</div>
 		
 
-		<button><img src="assets/images/diamond.png" alt="diamond" class="gem"></button>
-		<button><img src="assets/images/emerald.png" alt="emerald" class="gem"></button>
-		<button><img src="assets/images/amethyst.png" alt="amethyst" class="gem"></button>
-		<button><img src="assets/images/pearl.png" alt="pearl" class="gem"></button>
+		<button id="diamond"><img src="assets/images/diamond.png" alt="diamond" class="gem"></button>
+		<button id="emerald"><img src="assets/images/emerald.png" alt="emerald" class="gem"></button>
+		<button id="amethyst"><img src="assets/images/amethyst.png" alt="amethyst" class="gem"></button>
+		<button id="pearl"><img src="assets/images/pearl.png" alt="pearl" class="gem"></button>
 
 		<div class="score-title-container">
 			<p class="score-title">Your total score is:</p>
-			<h2 class="score-count" id="score-count">12</h2>
+			<h2 class="score-count" id="score-count">0</h2>
 		</div>
 
 		
 
 	</div>
 
-
-	<script type="text/javascript" href="assets/javascript/game.js"></script>
+	<script
+  	src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  	integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  	crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
