@@ -48,23 +48,48 @@ button{
 .goal-box{
 	color: #fff;
 	background-color: #225378;
-	width:150px;
+	width:250px;
 	padding: 20px;
 	margin-bottom: 20px;
-	
+}
+
+.goal-box > p{
+	font-size: 28px;
 }
 
 .score-box{
-	
+	font-size: 20px;
+	color:#fff;
+	background-color: #1695A3;
+	width:250px;
+	padding:20px;
+	margin-bottom: 20px;
+}
+
+.score-box > p{
+	font-size: 26px;
+}
+
+.status-message{
+	line-height: 40px;
+	font-size: 30px;
+	font-weight: bolder;
 }
 
 .score-title{
-	font-size: 20px;
+	font-size: 28px;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
 .score-count{
-	font-size: 28px;
+	font-size: 36px;
 
+}
+
+.score-title-container{
+	color: #fff;
+	background-color: #EB7F00;
+	padding: 20px;
+	width:300px;
 }
